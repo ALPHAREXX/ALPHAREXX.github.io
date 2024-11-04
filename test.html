@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <h4>silahkan Login</h4>
+</head>
+<body>
+    <input type="text" id="emailField" placeholder="email" />
+    <input type="password" id="passwordField" placeholder="password" />
+    <button id="cekBtn">Login</button>
+    <p id="output"></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const emailField = document.getElementById("emailField");
+            const passwordField = document.getElementById("passwordField");
+            const output = document.getElementById("output");
+            const correctEmail = "Alfarez123"; 
+            const correctPassword = "Randangan";
+
+            document.getElementById("cekBtn").addEventListener("click", function() {
+                const isEmailCorrect = emailField.value === correctEmail;
+                const isPasswordCorrect = passwordField.value === correctPassword;
+                if (isEmailCorrect && isPasswordCorrect) {
+                    output.textContent = "Login berhasil";
+                } else {
+                    output.textContent = "Email atau sandi salah";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
